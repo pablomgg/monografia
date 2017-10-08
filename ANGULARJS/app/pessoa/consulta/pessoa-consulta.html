@@ -1,0 +1,27 @@
+<div ng-controller="PessoaConsultaController as pessoaC">
+    <div class="pessoas-ativas">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Sobre Nome</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="pessoa in pessoaC.pessoas">
+                <tr>
+                    <td>{{ pessoa.nome }}</td>
+                    <td>{{ pessoa.sobre_nome }}</td>
+                    <td>{{ pessoa.endereco }}</td>
+                    <td>{{ pessoa.telefone }}</td>
+                    <td>
+                        <button ng-click="pessoaC.editar(pessoa.id)" class="mdi-btn"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                        <button ng-click="pessoaC.excluir(pessoa.id)" class="mdi-btn"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

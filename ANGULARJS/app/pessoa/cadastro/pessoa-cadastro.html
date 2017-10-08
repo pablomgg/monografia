@@ -1,0 +1,32 @@
+<div ng-controller="PessoaCadastroController as pessoa">
+    <div class="criar-pessoa" style="display:block">
+        <div class="col-md-6 mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+        ng-class="{'is-dirty' : pessoa.cadastro.nome}">
+            <input class="mdl-textfield__input" type="text" id="nome" name="nome" ng-model="pessoa.cadastro.nome">
+            <label class="mdl-textfield__label" for="nome">Nome</label>
+        </div>
+        <div class="col-md-6 mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+        ng-class="{'is-dirty' : pessoa.cadastro.sobre_nome}">
+            <input class="mdl-textfield__input" type="text" id="sobrenome" name="sobrenome" ng-model="pessoa.cadastro.sobre_nome">
+            <label class="mdl-textfield__label" for="sobrenome">SobreNome</label>
+        </div>
+        <div class="col-md-6 mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+        ng-class="{'is-dirty' : pessoa.cadastro.endereco}">
+            <input class="mdl-textfield__input" type="text" id="endereco" name="endereco" ng-model="pessoa.cadastro.endereco">
+            <label class="mdl-textfield__label" for="endereco">Endereco</label>
+        </div>
+        <div class="col-md-6 mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+        ng-class="{'is-dirty' : pessoa.cadastro.telefone}">
+            <input class="mdl-textfield__input" type="text" id="telefone" name="telefone" ng-model="pessoa.cadastro.telefone">
+            <label class="mdl-textfield__label" for="telefone">Telefone</label>
+        </div>
+        <button id="salvar" class="add-pessoa btn-success mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+         ng-click="pessoa.salvarPessoa()">
+                Salvar
+            </button>
+        <button id="cancelar" class="add-pessoa btn-warning mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+         ng-click="pessoa.cancelar()">
+                Cancelar
+            </button>
+    </div>
+</div>

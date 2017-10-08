@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="app" ng-strict-di class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="../bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../fonts/icon.css">
+    <link rel="stylesheet" href="../css/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="navbar navbar-inverse bg-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="./" class="navbar-brand">
+                        <i class="fa fa-calendar-check-o"></i>Agenda
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#!/pessoas">Pessoas</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="page-header">
+            <h2>
+                Cadastro de Pessoa AngularJS
+                <a id="adicionar_pessoa" class="pull-right mdl-button mdl-button--raised mdl-js-ripple-effect" href="#/pessoa/cadastro">
+                    Adicionar
+                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                </a>
+            </h2>
+        </header>
+
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div ng-view></div>
+
+        <div>app version:<span app-version></span></div>
+    </div>
+
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+    -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+
+
+
+
+
+    <script src="app.js"></script>
+    <script src="pessoa/pessoa.module.js"></script>
+    <script src="pessoa/pessoa.service.js?v=1"></script>
+
+    <script src="pessoa/consulta/pessoa-consulta.controller.js"></script>
+    <script src="pessoa/cadastro/pessoa-cadastro.controller.js"></script>
+
+
+    <script src="components/version/version.js"></script>
+    <script src="components/version/version-directive.js"></script>
+    <script src="components/version/interpolate-filter.js"></script>
+
+
+    <!-- jquery JS -->
+    <script src="../js/jquery-2.2.4.min.js"></script>
+
+    <!-- jquery JS -->
+    <script src="../js/jquery.mask.min.js"></script>
+
+
+    <!-- material design lite JS -->
+    <script defer src="../js/material.min.js"></script>
+
+    <!-- bootStrap JS -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- custom JS -->
+    <!--<script src="js/functions.js"></script>-->
+</body>
+
+</html>

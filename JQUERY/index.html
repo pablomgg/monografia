@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Projeto Jquery</title>
+
+    <!-- Renderizar em dipositvos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- material design lite Stylesheet -->
+    <link rel="stylesheet" href="fonts/icon.css">
+    <link rel="stylesheet" href="css/material.indigo-pink.min.css">
+
+    <!-- BootStrap Stylesheet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font-Awesome Stylesheet -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class='navbar navbar-inverse bg-inverse'>
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="./" class="navbar-brand">
+                        <i class="fa fa-calendar-check-o"></i>Agenda
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./">Pessoas</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="page-header">
+            <h2>Agenda Jquery
+                <button id="adicionar_pessoa" class="add-pessoa mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                    Adicionar
+                </button>
+            </h2>
+        </header>
+
+        <div class="pessoas-ativas">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sobre Nome</th>
+                        <th>Endereço</th>
+                        <th>Telefone</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="criar-pessoa" id="criar_pessoa">
+            <form action="#">
+                <div class="col-md-6 mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="nome" name="nome">
+                    <label class="mdl-textfield__label" for="nome">Nome</label>
+                </div>
+                <div class="col-md-6 mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="sobrenome" name="sobrenome">
+                    <label class="mdl-textfield__label" for="sobrenome">SobreNome</label>
+                </div>
+                <div class="col-md-6 mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="endereco" name="endereco">
+                    <label class="mdl-textfield__label" for="endereco">Endereco</label>
+                </div>
+                <div class="col-md-6 mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="telefone" name="telefone">
+                    <label class="mdl-textfield__label" for="telefone">Telefone</label>
+                </div>
+                <button type="button" id="salvar" class="add-pessoa btn-success mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                    Salvar
+                </button>
+                <button type="button" id="cancelar" class="add-pessoa btn-warning mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                    Cancelar
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- jquery JS -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+
+    <!-- jquery JS -->
+    <script src="js/jquery.mask.min.js"></script>
+
+    <!-- material design lite JS -->
+    <script defer src="js/material.min.js"></script>
+
+    <!-- bootStrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- custom JS -->
+    <script src="js/functions.js"></script>
+</body>
+
+</html>
